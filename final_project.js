@@ -1,32 +1,29 @@
 var namespace = "http://www.w3.org/2000/svg"
 
 // Write your code here!
-var player = makeImage("https://i2.wp.com/unluckystudio.com/wp-content/uploads/2015/03/preview_idle.gif?resize=250%2C213", 50, 50, 10, 10, 1.0)
-var zombie = makeImage("http://www.blackfaungame.com/wp-content/uploads/2014/12/Brute_walk.gif", 60, 60, 20, 20, 1.0)
+var player = makeImage("https://i1.wp.com/jay.mobile9.com/download/media/41/supermario_knocmls3.gif", 80, 60, 30, 30, 1.0)
+var fireball = makeImage("http://www.clipartdude.com/clip-arts/897/small-fireball-897918.png", 15, 20, 20, 20, 1.0)
 var scoreLable = makeText("0", 100, 20)
 
+function enemyMove(){
+
+  move(zombie)
+}
 
 addEventListener("keydown", animate)
 function animate(event) {
   var x = getX(player)
   var y = getY(player)
-  if(event.key == "ArrowRight" && x < 190){
+  if(event.key == "ArrowRight" && x < 160){
     move(player, 5, 0)
   }else if(event.key == "ArrowLeft" && x > 10){
     move(player, -5,0)
-  }else if(event.key == "ArrowUp" && y > 10){
-    move(player, 0, -5)
-  }else if(event.key == "ArrowDown" && y < 90){
-    move(player, 0, 5)
-  }else if(collides(player,zombie)){
+  }else  if(collides(player,fireball)){
     alert("Game Over")
     move(player, 60, 10)
   }
     requestAnimationFrame(animate)
   }
-function anotherOne(){
-
-}
 // DO NOT EDIT CODE BELOW THIS LINE!
 function getX(shape) {
   if (!shape) {
