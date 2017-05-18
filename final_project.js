@@ -2,12 +2,20 @@ var namespace = "http://www.w3.org/2000/svg"
 
 // Write your code here!
 var player = makeImage("https://i1.wp.com/jay.mobile9.com/download/media/41/supermario_knocmls3.gif", 80, 60, 30, 30, 1.0)
-var fireball = makeImage("http://www.clipartdude.com/clip-arts/897/small-fireball-897918.png", 15, 20, 20, 20, 1.0)
+var fireball = makeImage("http://www.clipartdude.com/clip-arts/897/small-fireball-897918.png", 15, 1, 20, 20, 1.0)
+var fireball = makeImage("http://www.clipartdude.com/clip-arts/897/small-fireball-897918.png", 65, 1, 20, 20, 1.0)
+var fireball = makeImage("http://www.clipartdude.com/clip-arts/897/small-fireball-897918.png", 85, 1, 20, 20, 1.0)
+var fireball = makeImage("http://www.clipartdude.com/clip-arts/897/small-fireball-897918.png", 125,1, 20, 20, 1.0)
 var scoreLable = makeText("0", 100, 20)
 
 function enemyMove(){
-
-  move(zombie)
+ var fx = getX("fireball")
+ var fy = getY("fireball")
+if(fy < 125){
+  move(fireball, 0, -5)
+}else if(fy > 125){
+  move(fireball, 0, 1)
+}
 }
 
 addEventListener("keydown", animate)
