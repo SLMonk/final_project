@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Audiowide|Exo|Press+Start+2P');
+@import url('https://fonts.googleapis.com/css?family=Exo');
+body {
+background: url("http://vignette3.wikia.nocookie.net/supermariogalaxy/images/5/50/Wiki-background/revision/latest?cb=20150227215012");
+background-size: 100%;
+background-position: 0px -20px;
+display: block;
+margin: auto;
+
+}
+
+h1 {
+font-family: 'Exo', sans-serif;
+font-family: 'Press Start 2P', cursive;
+color: red
+}
 svg {
 
 background: url("http://vignette2.wikia.nocookie.net/ssb/images/d/d8/WiiU_SuperSmashBros_Stage07_Screen_01.jpg/revision/latest?cb=20140409191328");
@@ -5,4 +21,9 @@ background-size: 100%;
 background-position: 0px -20px;
 display: block;
 margin: auto;
+}
+
+p {
+  font-family: 'Exo', sans-serif;
+  color: red
 }
