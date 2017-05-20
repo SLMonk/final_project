@@ -6,14 +6,29 @@ var fireball1 = makeImage("http://www.clipartdude.com/clip-arts/897/small-fireba
 var fireball2 = makeImage("http://www.clipartdude.com/clip-arts/897/small-fireball-897918.png", 65, 1, 20, 20, 1.0)
 var fireball3 = makeImage("http://www.clipartdude.com/clip-arts/897/small-fireball-897918.png", 85, 1, 20, 20, 1.0)
 var fireball4 = makeImage("http://www.clipartdude.com/clip-arts/897/small-fireball-897918.png", 125,1, 20, 20, 1.0)
-var scoreLable = makeText("0", 100, 20)
+
 
 function enemyMove(){
- var fy = getY(fireball1)
-if(fy < 125){
-  move(fireball1, 0, 5)
-}else if(fy > 125){
+ var f1 = getY(fireball1)
+ var f2 = getY(fireball2)
+ var f3 = getY(fireball3)
+ var f4 = getY(fireball4)
+if(f1 < 124){
+  move(fireball1, 0, 2)
+}else if(f1 > 124){
   setY(fireball1, 1)
+}if(f2 < 124){
+  move(fireball2, 0, 2)
+}else if(f2 > 124){
+  setY(fireball2, 1)
+}if(f3 < 124){
+  move(fireball3, 0, 2)
+}else if(f3 > 124){
+  setY(fireball3, 1)
+}if(f4 < 124){
+  move(fireball4, 0, 2)
+}else if(f4 > 124){
+  setY(fireball4, 1)
 }
 requestAnimationFrame(enemyMove)
 }
@@ -28,19 +43,19 @@ function animate(event) {
     move(player, -5,0)
   }else  if(collides(player,fireball1)){
     alert("Game Over")
-    move(player, 125, 1)
+    move(player, 190, 1)
 return(fireball1);
   }else  if(collides(player,fireball2)){
     alert("Game Over")
-    move(player, 125, 1)
+    move(player, 190, 1)
   return;
   }else  if(collides(player,fireball3)){
     alert("Game Over")
-    move(player, 125, 1)
+    move(player, 190, 1)
     return(fireball3);
   }else  if(collides(player,fireball4)){
     alert("Game Over")
-    move(player, 125, 1)
+    move(player, 190, 1)
     return;
   }
     requestAnimationFrame(animate)
